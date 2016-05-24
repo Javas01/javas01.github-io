@@ -78,7 +78,7 @@ function hitMe2() {
 	Shuffle(deck);
 for (; dealerTotal < 17; ) {
 	dealerHitMe();
-};
+mt6 };
 
 window.alert(deck[0]);
 		if (deck[0] === 1 || deck[0] === 11) {
@@ -149,9 +149,6 @@ function done() {
 window.onload = function() {
 document.getElementById("btn3").disabled = true;
 var players = prompt("how many players (1-2)")
-if (players === "2"){
-document.getElementById("btn3").disabled = false;
-}else{}
 Shuffle(deck);
 console.log(deck);
 dealerTotal = deck[1];
@@ -173,8 +170,12 @@ total2 = deck[5] + deck[6];
 cardHistory2.push(deck[5]);
 cardHistory2.push(deck[6]);
 console.log(cardHistory2);
-document.getElementById("chistory2").innerHTML = "PLAYER 2 CARD HISTORY: " + cardHistory2;
+
+if (players === "2"){
+document.getElementById("btn3").disabled = false;
 scoreBoard3();
+document.getElementById("chistory2").innerHTML = "PLAYER 2 CARD HISTORY: " + cardHistory2;
+}else{}
 }
 </script>
 
@@ -242,7 +243,7 @@ a{
 <button id="btn3" onclick="hitMe2()">player 2 Hit Me</button>
 </div>
 <p class = "score" id="myscore">Player 1: </p>
-<p class = "score" id="myscore2">Player 2: </p>
+<p class = "score" id="myscore2"> </p>
 <p class = "score" id="dealerscore">DEALER: </p>
 <div class = "history">
 	<p id = "chistory"></p>
