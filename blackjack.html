@@ -63,7 +63,9 @@
 			console.log(total);
 			scoreBoard()
 			if (total > 21) {
+				window.alert("You busted! Better luck next time.")
 				document.getElementById("btn1").disabled = true;
+				document.getElementById("btn2").disabled = true;
 				scoreBoard2();
 				document.getElementById("dhistory").innerHTML = "DEALER HISTORY: " + dealerHistory;
 			}else if (total === 21) {
@@ -134,10 +136,10 @@
 				scoreBoard2()
 				if (dealerTotal > 21){
 					window.alert("you win!!")
-					document.getElementById("dhistory").innerHTML = "DEALER HISTORY: " + dealerHistory;
+					document.getElementById("dhistory").innerHTML = "DEALER HISTORY: " + dealerHistory;	
 				}else if (total > dealerTotal) {
-					window.alert("you win!!")   
-					document.getElementById("dhistory").innerHTML = "DEALER HISTORY: " + dealerHistory;
+						window.alert("you win!!")   
+						document.getElementById("dhistory").innerHTML = "DEALER HISTORY: " + dealerHistory;		
 				}else if (total === dealerTotal) {
 					window.alert("you tied.")
 					document.getElementById("dhistory").innerHTML = "DEALER HISTORY: " + dealerHistory;
